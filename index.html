@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+    <title>CSS Technical Documentation Page</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Nav Menu -->
+        <div class="nav-menu">
+            <nav id="navbar">
+                <header>CSS Documentation</header>
+                <ul>
+                    <li><a href="#First" class="nav-link">Introduction</a></li>
+                    <li><a href="#Second" class="nav-link">CSS Syntax</a></li>
+                    <li><a href="#Third" class="nav-link">CSS Modules</a></li>
+                    <li><a href="#Fourth" class="nav-link">CSS Specifications</a></li>
+                    <li><a href="#Fifth" class="nav-link">Adding CSS to our document</a></li>
+                    <li><a href="#Sixth" class="nav-link">Styling HTML elements</a></li>
+                    <li><a href="#Seventh" class="nav-link">Changing the default behavior of elements</a></li>
+                    <li><a href="#Eighth" class="nav-link">Adding a class</a></li>
+                    <li><a href="#Reference" class="nav-link">Reference</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Doc -->
+        <div class="main-body">
+            <main id="main-doc">
+                <section class="main-section" id="First">
+                    <header>CSS Introduction</header>
+                    <p>CSS (Cascading Style Sheets) is used to style and lay out web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This documentation provides a gentle beginning to your path towards CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.</p>
+                    <p>Keypoints:</p>
+                     <ul>
+                        <li>CSS is the language we use to style a Web page..</li>
+                        <li>CSS stands for Cascading Style Sheets.</li>
+                        <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media.</li>
+                        <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once.</li>
+                        <li>External stylesheets are stored in CSS files.</li>
+                    </ul>
+                </section>
+                <br>
+                <section class="main-section" id="Second">
+                    <header>CSS Syntax</header>
+                    <p>CSS is a rule-based language — you define rules specifying groups of styles that should be applied to particular elements or groups of elements on your web page. For example "I want the main heading on my page to be shown as large red text."
+
+                    The following code shows a very simple CSS rule that would achieve the styling described above:</p>
+                    <pre>
+                    <code>h1 {
+    color: red;
+    font-size: 5em;
+}</code>
+            </pre>
+            <p>The rule opens with a selector . This selects the HTML element that we are going to style. In this case we are styling level one headings (h1).
+
+            We then have a set of curly braces { }. Inside those will be one or more declarations, which take the form of property and value pairs. Each pair specifies a property of the element(s) we are selecting, then a value that we'd like to give the property.
+
+            Before the colon, we have the property, and after the colon, the value. CSS properties have different allowable values, depending on which property is being specified. In our example, we have the color property, which can take various color values. We also have the font-size property. This property can take various size units as a value.
+
+            A CSS stylesheet will contain many such rules, written one after the other.</p>
+                <pre>
+                <code>h1 {
+    color: red;
+    font-size: 5em;
+}
+
+p {
+    color: black;
+}
+                </code>
+            </pre>
+                </section>
+                <section class="main-section" id="Third">
+                    <header>CSS Modules</header>
+                    <p>As there are so many things that you could style using CSS, the language is broken down into modules. You'll see reference to these modules as you explore MDN and many of the documentation pages are organized around a particular module. For example, you could take a look at the MDN reference to the Backgrounds and Borders module to find out what its purpose is, and what different properties and other features it contains. You will also find links to the CSS Specification that defines the technology (see below).
+                    </p>
+                    <p>At this stage you don't need to worry too much about how CSS is structured, however it can make it easier to find information if, for example, you are aware that a certain property is likely to be found among other similar things and are therefore probably in the same specification. 
+                    </p>
+                    <p>
+                    For a specific example, let's go back to the Backgrounds and Borders module — you might think that it makes logical sense for the background-color and border-color properties to be defined in this module. And you'd be right.</p>
+                </section>
+                <br>
+                <section class="main-section" id="Fourth">
+                    <header>CSS Specifications</header>
+                    <p>All web standards technologies (HTML, CSS, JavaScript, etc.) are defined in giant documents called specifications (or "specs"), which are published by standards organizations (such as the W3C, WHATWG, ECMA, or Khronos) and define precisely how those technologies are supposed to behave.</p>
+                    <p>CSS is no different — it is developed by a group within the W3C called the CSS Working Group. This group is made of representatives of browser vendors and other companies who have an interest in CSS. There are also other people, known as invited experts, who act as independent voices; they are not linked to a member organization.
+                    </p>
+                    <p>
+                    New CSS features are developed, or specified, by the CSS Working Group. Sometimes because a particular browser is interested in having some capability, other times because web designers and developers are asking for a feature, and sometimes because the Working Group itself has identified a requirement. CSS is constantly developing, with new features coming available. However, a key thing about CSS is that everyone works very hard to never change things in a way that would break old websites. A website built in 2000, using the limited CSS available then, should still be usable in a browser today!
+                    </p>
+                </section>
+                <br>
+                <section class="main-section" id="Fifth">
+                    <header>Adding CSS to our document</header>
+                    <p>The very first thing we need to do is to tell the HTML document that we have some CSS rules we want it to use. There are three different ways to apply CSS to an HTML document that you'll commonly come across, however, for now, we will look at the most usual and useful way of doing so — linking CSS from the head of your document.
+                    </p>
+                    <p>Create a file in the same folder as your HTML document and save it as styles.css. The .css extension shows that this is a CSS file.
+                    </p>
+                    <p>
+                    To link styles.css to index.html add the following line somewhere inside the (head)of the HTML document:</p>
+                    <code>
+                        &lt;link rel="stylesheet" href="styles.css"&gt;
+                    </code>
+                    <p>This &lt;link&gt; element tells the browser that we have a stylesheet, using the rel attribute, and the location of that stylesheet as the value of the href attribute.</p>   
+                </section>
+                <br>
+                <section class="main-section" id="Sixth">
+                    <header>Styling HTML elements</header>
+                    <p>Using your code editor add the following to your CSS file:</p>
+                    <pre>
+                    <code>h1 {
+  color: red;
+}</code>
+                    </pre>
+                    <p>Save your HTML and CSS files and reload the page in a web browser. The level one heading at the top of the document should now be red. If that happens, congratulations — you have successfully applied some CSS to an HTML document. If that doesn't happen, carefully check that you've typed everything correctly.</p>
+
+                    <p>By making our heading red we have already demonstrated that we can target and style an HTML element. We do this by targeting an element selector — this is a selector that directly matches an HTML element name. To target all paragraphs in the document you would use the selector p. To turn all paragraphs green you would use:
+                    </p>
+                    <pre>
+                        <code>p {
+  color: green;
+}           
+                        </code>
+                    </pre>
+
+                    <p>
+                        You can target multiple selectors at once, by separating the selectors with a comma. If I want all paragraphs and all list items to be green my rule looks like this:
+                    </p>
+                    <pre>
+                        <code>p, li {
+    color: green;
+}</code>
+                    </pre>
+                </section>
+                <section class="main-section" id="Seventh">
+                    <header>Changing the default behavior of elements</header>
+                    <p>When we look at a well-marked up HTML document, even something as simple as our example, we can see how the browser is making the HTML readable by adding some default styling. Headings are large and bold and our list has bullets. This happens because browsers have internal stylesheets containing default styles, which they apply to all pages by default; without them all of the text would run together in a clump and we would have to style everything from scratch. All modern browsers display HTML content by default in pretty much the same way.</p>
+                    <p>However, you will often want something other than the choice the browser has made. This can be done by choosing the HTML element that you want to change, and using a CSS rule to change the way it looks.  A good example is our &lt;ul&gt;, an unordered list. It has list bullets, and if I decide I don't want those bullets I can remove them like so:</p>
+                        <pre>
+                    <code>li {
+  list-style-type: none;
+}</code>
+                </pre>
+                    <p>Try adding this to your CSS now.</p>
+                </section>
+                <br>
+                <section class="main-section" id="Eighth">
+                    <header>Adding a class</header>
+                    <p>So far we have styled elements based on their HTML element names. This works as long as you want all of the elements of that type in your document to look the same. Most of the time that isn't the case and so you will need to find a way to select a subset of the elements without changing the others. The most common way to do this is to add a class to your HTML element and target that class.
+
+                    In your HTML document, add a class attribute to the second list item. Your list will now look like this:</p>
+                    <pre>
+                    <code>&lt;ul&gt;
+&lt;li&gt;Item one&lt;/li&gt;
+&lt;li class="special"&gt;Item two&lt;/li&gt;
+&lt;li&gt;Item &lt;em&gt;three&gt;&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+                    </code>
+                    </pre>
+                    <p>In your CSS you can target the class of special by creating a selector that starts with a full stop character. Add the following to your CSS file:</p>
+                    <pre>
+                        <code>.special {
+  color: orange;
+  font-weight: bold;
+}
+                        </code>
+                    </pre>
+                    <p>
+                    Save and refresh to see what the result is.
+                    </p>
+                    <p>You can apply the class of special to any element on your page that you want to have the same look as this list item. For example, you might want the <span> in the paragraph to also be orange and bold. Try adding a class of special to it, then reload your page and see what happens.</p>
+                    <p>
+                    Sometimes you will see rules with a selector that lists the HTML element selector along with the class:</p>
+                    <pre>
+                        <code>li.special {
+  color: orange;
+  font-weight: bold;
+}
+                        </code>
+                    </pre>
+                    <p>This syntax means "target any li element that has a class of special". If you were to do this then you would no longer be able to apply the class to a <span> or another element by adding the class to it; you would have to add that element to the list of selectors:</p>
+                        <pre>
+                            <code>li.special,
+span.special {
+  color: orange;
+  font-weight: bold;
+}
+                            </code>
+                        </pre>
+                        <p>
+                            As you can imagine, some classes might be applied to many elements and you don't want to have to keep editing your CSS every time something new needs to take on that style. Therefore it is sometimes best to bypass the element and refer to the class, unless you know that you want to create some special rules for one element alone, and perhaps want to make sure they are not applied to other things.
+                        </p>
+                </section>
+                <br>
+                <section class="main-section" id="Reference">
+                <header>Reference</header>
+                <article>
+                  <ul>
+                    <li>
+                      All the documentation in this page is taken from
+                      <a
+                    href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started"
+                    target="_blank"
+                    >MDN Web Docs.</a> Visit the website to learn more about CSS!
+        </li>
+      </ul>
+    </article>
+  </section>
+        <br>
+        <br>
+            </main>
+        </div>
+
+        <div class="footer">
+            <footer>&copy; 2021 Alexander Guerrero</footer>
+        </div>
+
+    </div>
+</body>
+</html>
