@@ -13,14 +13,14 @@
             <nav id="navbar">
                 <header>CSS Documentation</header>
                 <ul>
-                    <li><a href="#First" class="nav-link">Introduction</a></li>
-                    <li><a href="#Second" class="nav-link">CSS Syntax</a></li>
-                    <li><a href="#Third" class="nav-link">CSS Modules</a></li>
-                    <li><a href="#Fourth" class="nav-link">CSS Specifications</a></li>
-                    <li><a href="#Fifth" class="nav-link">Adding CSS to our document</a></li>
-                    <li><a href="#Sixth" class="nav-link">Styling HTML elements</a></li>
-                    <li><a href="#Seventh" class="nav-link">Changing the default behavior of elements</a></li>
-                    <li><a href="#Eighth" class="nav-link">Adding a class</a></li>
+                    <li><a href="#CSS_Introduction" class="nav-link">CSS Introduction</a></li>
+                    <li><a href="#CSS_Syntax" class="nav-link">CSS Syntax</a></li>
+                    <li><a href="#CSS_Modules" class="nav-link">CSS Modules</a></li>
+                    <li><a href="#CSS_Specifications" class="nav-link">CSS Specifications</a></li>
+                    <li><a href="#Adding_CSS_to_our_document" class="nav-link">Adding CSS to our document</a></li>
+                    <li><a href="#Styling_HTML_elements" class="nav-link">Styling HTML elements</a></li>
+                    <li><a href="#Changing_the_default_behavior_of_elements" class="nav-link">Changing the default behavior of elements</a></li>
+                    <li><a href="#Adding_a_class" class="nav-link">Adding a class</a></li>
                     <li><a href="#Reference" class="nav-link">Reference</a></li>
                 </ul>
             </nav>
@@ -29,7 +29,7 @@
         <!-- Main Doc -->
         <div class="main-body">
             <main id="main-doc">
-                <section class="main-section" id="First">
+                <section class="main-section" id="CSS_Introduction">
                     <header>CSS Introduction</header>
                     <p>CSS (Cascading Style Sheets) is used to style and lay out web pages — for example, to alter the font, color, size, and spacing of your content, split it into multiple columns, or add animations and other decorative features. This documentation provides a gentle beginning to your path towards CSS mastery with the basics of how it works, what the syntax looks like, and how you can start using it to add styling to HTML.</p>
                     <p>Keypoints:</p>
@@ -42,7 +42,7 @@
                     </ul>
                 </section>
                 <br>
-                <section class="main-section" id="Second">
+                <section class="main-section" id="CSS_Syntax">
                     <header>CSS Syntax</header>
                     <p>CSS is a rule-based language — you define rules specifying groups of styles that should be applied to particular elements or groups of elements on your web page. For example "I want the main heading on my page to be shown as large red text."
 
@@ -72,7 +72,7 @@ p {
                 </code>
             </pre>
                 </section>
-                <section class="main-section" id="Third">
+                <section class="main-section" id="CSS_Modules">
                     <header>CSS Modules</header>
                     <p>As there are so many things that you could style using CSS, the language is broken down into modules. You'll see reference to these modules as you explore MDN and many of the documentation pages are organized around a particular module. For example, you could take a look at the MDN reference to the Backgrounds and Borders module to find out what its purpose is, and what different properties and other features it contains. You will also find links to the CSS Specification that defines the technology (see below).
                     </p>
@@ -82,7 +82,7 @@ p {
                     For a specific example, let's go back to the Backgrounds and Borders module — you might think that it makes logical sense for the background-color and border-color properties to be defined in this module. And you'd be right.</p>
                 </section>
                 <br>
-                <section class="main-section" id="Fourth">
+                <section class="main-section" id="CSS_Specifications">
                     <header>CSS Specifications</header>
                     <p>All web standards technologies (HTML, CSS, JavaScript, etc.) are defined in giant documents called specifications (or "specs"), which are published by standards organizations (such as the W3C, WHATWG, ECMA, or Khronos) and define precisely how those technologies are supposed to behave.</p>
                     <p>CSS is no different — it is developed by a group within the W3C called the CSS Working Group. This group is made of representatives of browser vendors and other companies who have an interest in CSS. There are also other people, known as invited experts, who act as independent voices; they are not linked to a member organization.
@@ -92,7 +92,7 @@ p {
                     </p>
                 </section>
                 <br>
-                <section class="main-section" id="Fifth">
+                <section class="main-section" id="Adding_CSS_to_our_document">
                     <header>Adding CSS to our document</header>
                     <p>The very first thing we need to do is to tell the HTML document that we have some CSS rules we want it to use. There are three different ways to apply CSS to an HTML document that you'll commonly come across, however, for now, we will look at the most usual and useful way of doing so — linking CSS from the head of your document.
                     </p>
@@ -106,7 +106,7 @@ p {
                     <p>This &lt;link&gt; element tells the browser that we have a stylesheet, using the rel attribute, and the location of that stylesheet as the value of the href attribute.</p>   
                 </section>
                 <br>
-                <section class="main-section" id="Sixth">
+                <section class="main-section" id="Styling_HTML_elements">
                     <header>Styling HTML elements</header>
                     <p>Using your code editor add the following to your CSS file:</p>
                     <pre>
@@ -134,7 +134,7 @@ p {
 }</code>
                     </pre>
                 </section>
-                <section class="main-section" id="Seventh">
+                <section class="main-section" id="Changing_the_default_behavior_of_elements">
                     <header>Changing the default behavior of elements</header>
                     <p>When we look at a well-marked up HTML document, even something as simple as our example, we can see how the browser is making the HTML readable by adding some default styling. Headings are large and bold and our list has bullets. This happens because browsers have internal stylesheets containing default styles, which they apply to all pages by default; without them all of the text would run together in a clump and we would have to style everything from scratch. All modern browsers display HTML content by default in pretty much the same way.</p>
                     <p>However, you will often want something other than the choice the browser has made. This can be done by choosing the HTML element that you want to change, and using a CSS rule to change the way it looks.  A good example is our &lt;ul&gt;, an unordered list. It has list bullets, and if I decide I don't want those bullets I can remove them like so:</p>
@@ -146,7 +146,7 @@ p {
                     <p>Try adding this to your CSS now.</p>
                 </section>
                 <br>
-                <section class="main-section" id="Eighth">
+                <section class="main-section" id="Adding_a_class">
                     <header>Adding a class</header>
                     <p>So far we have styled elements based on their HTML element names. This works as long as you want all of the elements of that type in your document to look the same. Most of the time that isn't the case and so you will need to find a way to select a subset of the elements without changing the others. The most common way to do this is to add a class to your HTML element and target that class.
 
